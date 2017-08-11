@@ -1,0 +1,7 @@
+{
+  "require": {
+    "php": ">=5.2.8",
+    "phpmailer/phpmailer": "~5.2"
+  }
+
+}

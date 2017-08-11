@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8"/>
+        <title>Desafio</title>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+
+    </head>
+
+    <script>
+            var campos ="";
+            function avisa() {
+                alert("Ops, parece que você não preencheu todos os campos:\n"+campos+"Por favor preencha corretamente os campos em vermelho");
+            }
+            function validaform() {
+                campos="";
+                var a = "nome";
+
+
+                var nome = form.iName.value;
+                var email = form.iEmail.value;
+                var telefone = form.iTelefone.value;
+                var empresa = form.iEmpresa.value;
+                var ramo = form.iRamo.value;
+                var ferramentas = form.iFerramentas.value;
+                var falta = form.iFalta.value;
+                var x = 0;
+
+                if(nome == ""){
+                    campos += " (nome)\n";
+                    $("#nome").show();
+                    x++;
+                }
+                if(email == ""){
+                    $("#email").show();
+                    campos += " (email)\n";
+                    x++;
+                }
+                if(telefone == ""){
+                    $("#telefone").show();
+                    campos += " (telefone)\n";
+                    x++;
+                }
+                if(empresa == ""){
+                    $("#empresa").show();
+                    campos += " (empresa)\n";
+                    x++;
+                }
+                if(ramo == ""){
+                    $("#ramo").show();
+                    campos += " (ramo)\n";
+                    x++;
+                }
+                if(ferramentas == ""){
+                    $("#ferramentas").show();
+                    campos += " (ferramentas)\n";
+                    x++;
+                }
+                if(falta == ""){
+                    $("#falta").show();
+                    campos += " (coisas que faltam na ferramenta)\n";
+                    x++;
+                    }
+                if(x!=0){
+                    avisa();
+                }
+                if (x==0){
+                    confirmaForm();
+                }
+            }
+        
+            function confirmaForm() {
+                $("#botao").hide();
+                $("#msg").show();
+                $("#form").submit();
+
+            }
+    </script>
+
+    <body>
+
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Customer Relationship Management</h1>
+                    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A revolução do relacionamento com seu cliente está aqui</h2>
+                </hgroup>
+
+        <img id="icone" src="_imagens/procedo%20.png">
+
+                <nav id="menu">
+                    <ul>
+                        <li><a href="https://www.procedo.com.br/" target="_blank">Home</a></li>
+                        <li><a href="https://www.procedo.com.br/planos/" target="_blank">Planos</a></li>
+                        <li><a href="http://blog.procedo.com.br/" target="_blank">Blog</a></li>
+                        <li><a href="https://app.procedo.com.br/empresa/cadastro" target="_blank">Teste grátis</a></li>
+                        <li><a href="https://www.procedo.com.br/contato/" target="_blank">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo">
+                <article id="noticia">
+                        <hgroup>
+                                <h1>Saiba tudo sobre a Procedo</h1>
+                        </hgroup>
+
+
+                        <h2> &nbsp; O que é </h2>
+                        <p> A <b>Procedo</b> é  uma empresa que disponibiliza um Software online que minimiza riscos,
+                            gera comunicação e aumenta o comprometimento entre as áreas preservando a LUCRATIVIDADE </p>
+                        <figure class="foto-legenda">
+                            <img src="_imagens/crm.jpg" width="600"/>
+                            <figcaption id="legenda">
+                                <br/>
+                                <h4>Procedo</h4>
+                                <h5>Uma nova maneira de interagir com seu cliente</h5>
+                            </figcaption>
+                        </figure>
+                        <h2> &nbsp; Tempo de mercado</h2>
+                        <p>Uma empresa com experiência de mercado com mais de 10 anos</p>
+
+                        <h2> &nbsp; Especificações Técnicas</h2>
+                        <p> Com seu coração no interior de são paulo, vem trazendo inovações e facilidades para seus clientes</p>
+                        <h2> &nbsp; Como funciona</h2>
+                        <p>Você pode experimentar o software por 15 dias gratuitamente para conhecer seu funcionamento, nele você podera controlar varias atividades e conhecer muito mais do seu cliente pois as informações serão armazenadas, facilitando sempre pra você, um sistema com várias funcionalidades, mas todas acessíveis a você </p>
+
+                            <table id="funcoes">
+
+                                <caption>O que você pode fazer com o Software da procedo?</caption>
+
+                                <tr><td class = "ce">VISÃO COMPLETA DO CLIENTE</td> <td class = "cd">Tenha todas as
+                                                     informações sobre seus clientes centralizadas em um único lugar.</td></tr>
+
+                                <tr><td class = "ce">GESTÃO DE PROSPECTS</td> <td class = "cd">Acompanhe de maneira interativa
+                                                                                                a evolução de seus prospects até que
+                                                                                                se tornem clientes</td></tr>
+
+                                <tr><td class = "ce">TRIAGEM DE LEADS</td> <td class = "cd">Importe listas de empresas e converta
+                                                                             para prospects somente o que for interessante</td></tr>
+
+                                <tr><td class = "ce">GEOLOCALIZAÇÃO DE EMPRESAS</td> <td class = "cd">Visualize em um mapa todos
+                                                                 os seus clientes e prospects e defina áreas de atuação</td></tr>
+
+                                <tr><td class = "ce">FILA DE ATENDIMENTO</td> <td class = "cd">Automatize a sequência de atendimento
+                                                                                        de novos clientes de maneira justa</td></tr>
+
+                                <tr><td class = "ce">IMPORTAÇÃO DE CADASTROS</td> <td class = "cd">Ganhe tempo com a importação de
+                                                                                   cadastros sem precisar registrar um a um</td></tr>
+
+                                <tr><td class = "ce">AGENDA DE CONTATOS</td> <td class = "cd">Tenha acesso aos dados de contatos de
+                                                                                  seus clientes de maneira rápida e fácil</td></tr>
+
+                                <tr><td class = "ce">FLUXO DE APROVAÇÃO</td> <td class = "cd">Garanta a qualidade de sua carteira
+                                                     de clientes através do fluxo de aprovação diminuindo a inadimplência</td></tr>
+                            </table>
+                                <br/>
+                </article>
+            </section>
+            <aside id="lateral">
+                <h1>Queremos melhorar nosso serviço e também o seu, por favor preencha o formulário abaixo:</h1>
+
+                <form id="form" action="./_php/enviar.php" name="form_contato" method="post" >
+
+                    <div class="form-group">
+                        <label for="iName">Nome completo<span id="nome" class="preencha">*</span></label>
+                        <input type="text" class="form-control" id="iName" name="nName" placeholder="Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iTelefone">Digite seu telefone<span id="telefone" class="preencha">*</span></label>
+                        <input type="tel" class="form-control" id="iTelefone" name="nTelefone" placeholder="Telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iEmail">Email address<span id="email" class="preencha">*</span></label>
+                        <input type="email" class="form-control" id="iEmail" name="nEmail" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iEmpresa">Nome de sua Empresa <span id="empresa" class="preencha">*</span></label>
+                        <input type="text" class="form-control" id="iEmpresa" name="nEmpresa" placeholder="Empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iRamo">Ramo de atividade da empresa<span id="ramo" class="preencha" >*</span></label>
+                        <input type="text" class="form-control" id="iRamo" name="nRamo" placeholder="Ramo empresarial">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iFerramentas">Ferramentas usadas para relacionamento com seu cliente
+                                                                <span id="ferramentas" class="preencha">*</span></label>
+                        <textarea class="form-control" rows="5" id="iFerramentas" name="nFerramentas"
+                                          placeholder="Digite as ferramentas utilizadas"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iFalta">Digite coisas que você acha que faltam para melhorar sua ferramenta
+                                                                      <span id="falta" class="preencha">*</span></label>
+                        <textarea class="form-control" rows="5" id="iFalta" name="nFalta"
+                                  placeholder="Acrescente o que melhoraria em sua ferramenta"></textarea>
+                    </div>
+
+                      <div id="buttom">
+                          <button onclick="validaform()" id="botao" type="button" class="btn btn-default">Submit</button>
+                          <div id="msg" class="alert alert-success" role="alert">Obrigado seu formulário foi enviado com sucesso</div>
+                      </div>
+
+                </form>
+
+            </aside>
+
+            <footer id="rodape">
+                <br/>
+
+            <span id="slogan">"O comercial vende sonhos, enquanto isso a área de serviços entrega pesadelos"</span>
+                <br/> Copyright &copy; 2017 - by Procedo Tecnologia <br/>
+            <a href="https://www.facebook.com/procedotec/" target="_blank"><img id="face" src="_imagens/faceicon.png"/></a> | <a href="http://blog.procedo.com.br/"
+                                                                                             target="_blank"><img id="blog" src="_imagens/blogicon.png"/></a>
+                <br/>
+            </footer>
+        </div>
+
+    </body>
+</html>

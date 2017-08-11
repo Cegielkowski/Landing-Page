@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'fonte-slogan';
+    src: url(../_fonts/Indie_Flower/IndieFlower.ttf);
+}
+@font-face {
+    font-family: 'fonte-mada';
+    src: url(../_fonts/Mada/Mada-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'fonte-body1';
+    src: url(../_fonts/SairaN/Saira-Regular.ttf);
+}
+@font-face {
+    font-family: 'font-body2';
+    src: url(../_fonts/Open_SansN/OpenSans-Regular.ttf);
+}
+/*-------------------------------------------------------------*/
+
+body {
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+    font-family: font-body2;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 910px;
+    top:60px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+}
+
+header#cabecalho h1 {
+    font-family: 'fonte-mada', sans-serif;
+    font-size: 30pt;
+    color: black;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: Arial,sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+div#interface {
+    width: 1200px;
+    background-color: #ffffff;
+    margin: -20px auto 10px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+/* Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+    position: relative;
+    border:8px solid white;
+    box-shadow: 1px 1px 4px black;
+    width: 40%;
+    height: 50%;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+
+}
+
+/* Formatação do Menu */
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 7px;
+    left: 740px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #00BFFF;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+    border-radius: 10px;
+}
+
+nav#menu li:hover {
+    background-color: #87CEFA;
+
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+}
+
+section#corpo {
+    display: block;
+    width: 600px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#noticia h2 {
+    font-size: 12pt;
+    color: black;
+    background-color: #00BFFF;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+table#funcoes {
+    border: 1px solid black;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#funcoes td {
+    border: 1px solid #606060;
+    padding: 5px;
+    text-align: right;
+}
+
+table#funcoes td.ce {
+    color: black;
+    background-color: #00BFFF;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#funcoes td.cd {
+    background-color: #60AFFF;
+    color:black;
+
+}
+
+table#funcoes caption {
+    color: black;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+aside#lateral {
+    display: block;
+    width: 550px;
+    float: right;
+    background-color: #00BFFF;
+    padding: 10px;
+    margin-top: 61px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+    text-align: center;
+}
+
+/* FORMS */
+
+div#msg {
+    display: none;
+}
+
+span.preencha {
+    color: red;
+    display: none;
+}
+
+/* Fonte pro slogan :) */
+
+span#slogan {
+    font-family: fonte-slogan;
+}
+
+img#face {
+    width: 35px;
+}
+
+img#blog {
+    width: 35px;
+}
+
+figcaption#legenda {
+    display: block;
+}
+
+figcaption h4 {
+    text-align: center;
+}
+
+figcaption h5 {
+    text-align: center;
+}
