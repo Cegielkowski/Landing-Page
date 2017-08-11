@@ -105,9 +105,9 @@ nav#menu {
 nav#menu ul {
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: 7px;
-    left: 740px;
+    position: relative;
+    top: -80px;
+    left: 678px;
 }
 
 nav#menu li {
