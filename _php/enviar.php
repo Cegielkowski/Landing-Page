@@ -11,6 +11,24 @@
         $data_envio = date('d/m/Y');
         $hora_envio = date('H:i:s');
 
+// Parte de conexão e indexação de arquivos ao MySQL
+
+    try {
+        $dbh = new PDO('mysql:host=localhost;dbname=pesquisa', 'root', "root");
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sth = $dbh->prepare("INSERT INTO formulario VALUES(:nome,:telefone,:email,:empresa,:ramo,:ferramentas,:falta)");
+        $sth->execute(array(':nome' => $nome, ':telefone' => $telefone, ':email' => $email, ':empresa' => $empresa, ':ramo' => $ramo, ':ferramentas' => $ferramentas, ':falta' => $falta));
+
+        $sth = null;
+        $dbh = null;
+        } catch (PDOException $e) {
+          print "Error!: " . $e->getMessage() . "<br/>";
+          die();
+          }
+
+// Fim da parte de MySQL
+
+
     // Composição do E-mail
     $arquivo = "
       <style type='text/css'>
