@@ -1,3 +1,4 @@
+<meta charset="UTF-8"/>
 <?php
   //Pega informações do for e atribui pro php
     require '../vendor/autoload.php';
